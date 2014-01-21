@@ -8,7 +8,7 @@ module Xray
   class Engine < ::Rails::Engine
     initializer "xray.initialize" do |app|
       ensure_asset_pipeline_enabled! app
-      app.middleware.use Xray::Middleware
+      # app.middleware.use Xray::Middleware
 
       # Register as a Sprockets processor to augment JS files, including
       # compiled coffeescript, with filepath information. See
